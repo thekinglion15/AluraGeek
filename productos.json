@@ -1,3 +1,33 @@
 [
-    
+    {
+        "id": 1,
+        "nombre": "Taza Stormtrooper",
+        "imagen": "./assets/favicon.png",
+        "precio": "$60,00"
+    },
+    {
+        "id": 2,
+        "nombre": "Taza Boba Fett",
+        "imagen": "./assets/favicon.png",
+        "precio": "$60,00"
+    },
+    {
+        "id": 3,
+        "nombre": "Taza Han Solo",
+        "imagen": "./assets/favicon.png",
+        "precio": "$60,00"
+    },
+    {
+        "id": 4,
+        "nombre": "Taza Chewbacca",
+        "imagen": "./assets/favicon.png",
+        "precio": "$60,00"
+    },
+    {
+        "id": 5,
+        "nombre": "Taza Chewbacca",
+        "imagen": "./assets/favicon.png",
+        "precio": "$60,00"
+    }
 ]
+
