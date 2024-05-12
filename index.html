@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AluraGeek</title>
+        <link rel="shortcut icon" href="assets/favicon.png"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <img src="assets/logo1.png" alt="Logo AluraGeek">
+        </header>
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <section class="productos">
+                    <h1>Mis Productos</h1>
+                </section>
+                <section class="formulario">
+                    <h1>Agregar producto</h1>
+                    <form id="formulario" action="#">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="precio">Precio</label>
+                        <input type="text" id="precio" name="precio" required>
+                        <label for="imagen">Imagen</label>
+                        <input type="text" id="imagen" name="imagen" required>
+                        <div class="botones">
+                            <button type="submit">Enviar</button>
+                            <button id="limpiar">Limpiar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div>
+                <img src="assets/logo1.png" alt="Logo AluraGeek">
+                <img src="assets/logo2.png" alt="Logo The King Lion">
+            </div>
+            <p>Desarrollado por Gabriel De León ~ The King Lion</p>
+            <p>&copy; Todos los derechos reservados.</p>
+            <p>Alura Latam <span id="year"></span></p>
+        </footer>
+        <script src="script/script.js"></script>
+    </body>
+</html>
