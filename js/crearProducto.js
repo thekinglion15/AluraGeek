@@ -1,32 +1,40 @@
-import { crearProducto } from "./api.js";
+import { API } from "./api.js";
+import { APIurl } from "./main.js";
+import { mostrarProductos } from "./main.js";
+import { contenedor } from "./main.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const nuevoProductoForm = document.getElementById("formulario");
+const limpiar = document.getElementById("limpiar");
+const enviar = document.getElementById("enviar");
+const form = document.getElementById("formulario");
 
-  nuevoProductoForm.addEventListener("submit", async function (event) {
+enviar.addEventListener("click", event => {
     event.preventDefault();
-
     const nombre = document.getElementById("nombre").value;
-    const precio = parseFloat(document.getElementById("precio").value);
+    const precio = document.getElementById("precio").value;
     const imagen = document.getElementById("imagen").value;
 
-    const nuevoProducto = {
-      nombre: nombre,
-      precio: precio,
-      imagen: imagen
-    };
+    agregar(nombre, precio, imagen);
+});
 
+async function agregar(nombre, precio, imagen) {
     try {
-      const productoCreado = await crearProducto(nuevoProducto);
-      console.log("Producto creado:", productoCreado);
-      alert("Producto creado exitosamente.");
-      // Puedes realizar otras acciones después de crear el producto, como actualizar la lista de productos en la página
-    } catch (error) {
-      console.error("Error al crear el nuevo producto:", error);
-      alert("Error al crear el producto. Por favor, intenta nuevamente.");
-    }
+        const nuevo = await API.crearProducto(nombre, precio, imagen, APIurl);
 
-    // Limpiar los campos del formulario después de enviarlo
-    nuevoProductoForm.reset();
-  });
+        if(nuevo === null) {
+            throw new Error("Error al intentar agregar el producto.");
+        }
+
+        contenedor.innerHTML = "";
+        mostrarProductos();
+        form.reset();
+        return;
+    }
+    catch(error) {
+        console.error("Error al intentar agregar el producto:", error);
+        throw error;
+    }
+}
+
+limpiar.addEventListener("click", function() {
+    form.reset();
 });
