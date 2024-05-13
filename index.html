@@ -18,6 +18,8 @@
             <div class="container">
                 <section class="productos">
                     <h1>Mis Productos</h1>
+                    <p id="nohay"></p>
+                    <div class="grid-container"></div>
                 </section>
                 <section class="formulario">
                     <h1>Agregar producto</h1>
@@ -29,7 +31,7 @@
                         <label for="imagen">Imagen</label>
                         <input type="text" id="imagen" name="imagen" required>
                         <div class="botones">
-                            <button type="submit">Enviar</button>
+                            <button id="enviar">Enviar</button>
                             <button id="limpiar">Limpiar</button>
                         </div>
                     </form>
@@ -46,9 +48,7 @@
             <p>&copy; Todos los derechos reservados.</p>
             <p>Alura Latam <span id="year"></span></p>
         </footer>
-        <script type="module" src="js/api.js"></script>
         <script type="module" src="js/crearProducto.js"></script>
-        <script type="module" src="js/listarProductos.js"></script>
-        <!--<script src="js/script.js"></script>-->
+        <script type="module" src="js/main.js"></script>
     </body>
 </html>
